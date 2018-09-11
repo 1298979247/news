@@ -1,0 +1,43 @@
+<div class="view">
+    <div class="opection">
+        <div class="left">
+            <div class="selecter">
+                <button>查询</button>
+                <select>
+                    <option value="">全部</option>
+                    <option value="">存在</option>
+                    <option value="">添加</option>
+                </select>
+            </div>
+            <div class="gaishan">
+                <button>删除</button>
+                <button>修改</button>
+            </div>
+        </div>
+        <button>新建</button>
+    </div>
+    <div class="neirong">
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col"><input type="checkbox"></th>
+                <th scope="col">id</th>
+                <th scope="col">cid</th>
+                <th scope="col">name</th>
+                <th scope="col">num</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach($abb as $k=>$v){ ?>
+            <tr>
+                <th scope="row"><input type="checkbox"></th>
+                <td><input type="text" value="<?php echo $v['id']?>"></td>
+                <td><input type="text" value="<?php echo $v['cid']?>"></td>
+                <td><input type="text" value="<?php echo $v['name']?>"></td>
+                <td><input type="text" value="<?php echo $v['num']?>"></td>
+            </tr>
+            <?php }?>
+            </tbody>
+        </table>
+    </div>
+</div>

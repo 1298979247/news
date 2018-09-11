@@ -1,0 +1,51 @@
+<div class="view">
+    <div class="opection">
+        <div class="left">
+            <div class="selecter">
+                <button>查询</button>
+                <select>
+                    <a href="index.php?m=news"><option value="">全部</option></a>
+
+                    <?php foreach($abb as $k=>$v){ ?>
+                    <a href="index.php?m=news&c=<?php echo $v['num']?>"><option value=""><?php echo $v["name"] ?></option></a>
+                    <?php } ?>
+                </select>
+            </div>
+            <div class="gaishan">
+                <button>删除</button>
+                <button>修改</button>
+            </div>
+        </div>
+        <button>新建</button>
+    </div>
+    <div class="neirong">
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col"><input type="checkbox"></th>
+                <th scope="col">id</th>
+                <th scope="col">title</th>
+                <th scope="col">des</th>
+                <th scope="col">con</th>
+                <th scope="col">time</th>
+                <th scope="col">url</th>
+                <th scope="col">num</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach($abc as $k=>$v){ ?>
+            <tr>
+                <th scope="row"><input type="checkbox"></th>
+                <td><input type="text" value="<?php echo $v['id']?>"></td>
+                <td><input type="text" value="<?php echo $v['title']?>"></td>
+                <td><input type="text" value="<?php echo $v['des']?>"></td>
+                <td><input type="text" value="******"></td>
+                <td><input type="text" value="<?php echo $v['time']?>"></td>
+                <td><input type="text" value="<?php echo $v['url']?>"></td>
+                <td><input type="text" value="<?php echo $v['num']?>"></td>
+            </tr>
+            <?php }?>
+            </tbody>
+        </table>
+    </div>
+</div>

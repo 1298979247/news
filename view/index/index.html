@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>今日头条</title>
+    <link rel="stylesheet" href="assets/index/css/currency.css">
+    <link rel="stylesheet" href="assets/index/css/chang.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_791193_gveh6cxb3rk.css">
+    <link rel="stylesheet" href="assets/index/css/index.css">
+    <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.js"></script>
+    <script src="/news/js/index.js"></script>
+</head>
+<body>
+<header>
+    <a href=""><i class="iconfont icon-xinxi"></i></a>
+    <div class="title">
+        <h2>今日头条</h2>
+        <i class="iconfont icon-shuaxin"></i>
+    </div>
+    <a href="index.php?action=serch"><i class="iconfont icon-sousuo"></i></a>
+</header>
+<nav>
+    <div class="nav-box">
+        <ul class="box">
+            <?php
+                foreach($abc as $k=>$v){
+            ?>
+            <li><a href="index.php?num=<?php echo $v['num'] ?>"><span><?php echo $v["name"]?></span></a></li>
+            <?php }?>
+        </ul>
+    </div>
+    <a class="add" href="index.php?action=category">
+        <i class="iconfont icon-ic_join_dialing_norm"></i>
+    </a>
+</nav>
+<section>
+    <div class="Box">
+        <?php  foreach($abb as $k=>$v){ ?>
+            <a href="index.php?action=xiangqing&y=<?php echo $v['id'] ?>">
+                <div class="box">
+                    <div class="title">
+                        <h1><?php echo $v["title"] ?></h1>
+                        <div class="desc">
+                            <span class="source">央视网新闻</span>
+                            <span>评论</span>
+                            <span class="num">56</span>
+                        </div>
+                    </div>
+
+
+                    <div class="pic">
+                        <img src="https://p3.pstatp.com/list/190x124/pgc-image/15342040264340bea0cb534" alt="图片加载失败">
+                    </div>
+                </div>
+            </a>
+        <?php } ?>
+    </div>
+    <div class="M-box"></div>
+</section>
+<footer></footer>
+</body>
+</html>

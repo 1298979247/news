@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>今日头条</title>
+    <link rel="stylesheet" href="assets/index/css/currency.css">
+    <link rel="stylesheet" href="assets/index/css/chang.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_791193_gveh6cxb3rk.css">
+    <link rel="stylesheet" href="assets/index/css/index.css">
+    <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.js"></script>
+    <script src="/news/js/index.js"></script>
+</head>
+<body>
+<header>
+    <a href=""><i class="iconfont icon-xinxi"></i></a>
+    <div class="title">
+        <h2>今日头条</h2>
+        <i class="iconfont icon-shuaxin"></i>
+    </div>
+    <a href="index.php?action=serch"><i class="iconfont icon-sousuo"></i></a>
+</header>
+<section>
+    <?php foreach($abc as $k=>$v){
+        echo $v["con"];
+    }?>
+</section>
+<footer></footer>
+</body>
+</html>

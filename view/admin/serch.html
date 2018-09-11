@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
+</head>
+<body>
+<form action="https://www.baidu.com/s" target="_blank">
+    <input type="text" name="wd" autocomplete="off">
+    <button type="submit">提交</button>
+</form>
+</body>
+<script>
+    $(function(){
+        $("form").submit(function(){
+            let wd=$("input").val();
+            if(wd.trim()){
+                location.href="https://www.baidu.com/s?wd="+wd
+            }else{
+                alert("请输入关键字")
+            }
+
+            return false;
+        })
+
+    })
+</script>
+</html>
